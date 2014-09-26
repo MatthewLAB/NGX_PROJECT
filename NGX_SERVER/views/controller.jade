@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title NGX Controller
+    meta(name="viewport",content="initial-scale=1.0;maximum-scale=1.0;minimum-scale=1.0;user-scalable=no;")
+    script(src='http://code.jquery.com/jquery-1.10.2.min.js')
+    style(type='text/css')
+      *{margin:0;padding:0;}
+      html,body{height:100%;}
+  body
+    canvas(id="ngxCtl", style="width:100%; height:100%; border:1px solid #000000;")
+    
+    script(src='/socket.io/socket.io.js')
+    script(src='http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v5.1.0.min.js')
+    script(type='text/javascript').
+      var socket = io();
+      $("body").css({overflow:'hidden'}).bind('touchmove', function(e){e.preventDefault()});
+      $("#ngxCtl").bind('touchmove', function(e){
+        var event = e.originalEvent;
+        var xy = new Array(event.touches[0].screenX, event.touches[0].screenY);
+        socket.emit('move control', xy);
+        touchEvent.preventDefault();
+      });
+      socket.emit('join', 'device', '#{siteID}');
+      
+      $(window).unload(function() {
+        socket.emit('exit', 'device', '#{siteID}');
+      });
+
+    

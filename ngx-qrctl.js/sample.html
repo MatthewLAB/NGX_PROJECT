@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Test NGX Client</title>
+  </head>
+  <body id="ngx_area">
+  <canvas id="testGame" width="800" height="600"></canvas>
+
+  </body>
+
+
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="plugin/jquery.qrcode-0.11.0.min.js"></script>
+  <script src="plugin/ngx-qrctl.js"></script>
+  <script>
+  	$( "#ngx_area" ).ngxQrCtl({
+        'position':'top',
+        'width':10,
+        'height':10,
+        'debug':true
+    });
+
+    $('#ngx_area').bind('move',function(event,x,y){
+        $.moveCircle(x,y);
+    });
+
+    // Test
+    var canvas = document.getElementById('testGame');
+    var context = canvas.getContext('2d');
+    var centerX = canvas.width / 2;
+    var centerY = canvas.height / 2;
+    var radius = 70;
+
+    $.init = function() {
+        context.beginPath();
+        context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+        context.fillStyle = 'green';
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = '#003300';
+        context.stroke();
+    }
+
+    $.moveCircle = function(x,y) {
+        // Clear Canvas
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.beginPath();
+        context.arc(x, y, radius, 0, 2 * Math.PI, false);
+        context.fillStyle = 'green';
+        context.fill();
+        context.lineWidth = 5;
+        context.strokeStyle = '#003300';
+        context.stroke();
+    }
+
+    $.init();
+
+  </script>
+</html>

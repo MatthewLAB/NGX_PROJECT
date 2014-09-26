@@ -1,0 +1,10 @@
+{
+  "name": "NGX_SERVER",
+  "version": "0.0.1",
+  "description": "this is NGX QR-based server",
+  "dependencies": {
+    "express": "^4.9.4",
+    "jade": "^1.7.0",
+    "socket.io": "^1.1.0"
+  }
+}
