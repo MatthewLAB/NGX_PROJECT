@@ -4,21 +4,12 @@ var io = require('socket.io')(http);
 
 app.set('view engine', 'jade');
 
-app.get('/', function(req, res){
-  res.sendFile('/prj/NGX_SERVER/index.html');
-});
-
 app.get('/c/:siteID', function(req, res){
 	 res.render('controller', { siteID: req.params.siteID});
 });
 
-app.get('/game', function(req, res){
-  res.sendFile('/prj/NGX_SERVER/game.html');
-});
-
 var devices = [];  
 var sites = [];  
-var clients = [];
 
 io.on('connection', function(client) {
 	client.on("join", function(type,siteID) {
