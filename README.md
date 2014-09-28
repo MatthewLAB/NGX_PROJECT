@@ -6,8 +6,8 @@
 
 ###(Setup to using server on Matthew LAB)
 
-1. you need to lasjng(http://larsjung.de)'s jquery qrcode plugin.
-- download http://larsjung.de/jquery-qrcode/ and move into plugin folder
+1. You need to lasjng(http://larsjung.de)'s jquery qrcode plugin.
+- Download http://larsjung.de/jquery-qrcode/ and move into plugin folder
 
 2. Add to below script code end of body tag
 ```javascript
@@ -35,6 +35,17 @@ $('#ngx_area').bind('move',function(event,x,y){
     $.moveCircle(x,y);
 });
 ```
+
+###Event Trigger List
+#####Event will be added more :)
+
+| Event Name | Argument | Description |
+| --------- | ------- | ------- |
+| move  | e=(x,y) | User's touching X,Y coordinate |
+| btnDown  | e=('W' || 'S' || 'A' || 'D') | WSAD Button |
+| swipeleft  | Null | Is left swiped |
+| swiperight  | Null | Is right swiped |
+
 ###(Setup to using your own server)
 
 1. You need to install socket.io and node.js on your server
