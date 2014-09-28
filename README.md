@@ -42,7 +42,7 @@ $('#ngx_area').bind('move',function(event,x,y){
 | Event Name | Argument | Description |
 | --------- | ------- | ------- |
 | move  | e=(x,y) | User's touching X,Y coordinate |
-| btnDown  | e=('W' || 'S' || 'A' || 'D') | WSAD Button |
+| btnDown  | e=('W' or 'S' or 'A' or 'D') | WSAD Button |
 | swipeleft  | Null | Is left swiped |
 | swiperight  | Null | Is right swiped |
 
