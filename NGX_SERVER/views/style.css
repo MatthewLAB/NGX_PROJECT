@@ -1,0 +1,10 @@
+* {margin:0;padding:0;}
+.ngxCtlPanel{
+	border: 0px ridge black;
+	width:100%;
+	height:100%;
+}
+html, body {
+	height:100%;
+	-webkit-text-size-adjust: 100%;
+}

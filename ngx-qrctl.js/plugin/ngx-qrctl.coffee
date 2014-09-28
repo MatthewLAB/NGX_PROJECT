@@ -66,6 +66,7 @@ class ngxQrCtl extends jQueryPlugIn
     width:50
     height:50
     color:"#3a3"
+    background:"#fff"
     surl: 'http://ngx.matthewlab.com/'
     debug: false
 
@@ -82,11 +83,13 @@ class ngxQrCtl extends jQueryPlugIn
       Socket.on  'join ok', (siteID) ->
         #Create QR-Code
         ext.element.qrcode({
+          "render": "div",
           "width": ext.options.width,
           "height": ext.options.height,
           "color": ext.options.color,
+          "background":ext.options.background,
           "text": "http://ngx.matthewlab.com/c/"+encodeURIComponent(siteID)
-        })
+        });
         return
 
       Socket.on  'move', (event) ->
@@ -94,7 +97,30 @@ class ngxQrCtl extends jQueryPlugIn
         ext.element.trigger('move',event)
 
         return
+      #Socket.on  'gyro move', (event) ->
+        #ext.moveCircle event
+      #  ext.element.trigger('gyro_move',event)
+      #  return
 
+      Socket.on  'btnDown', (event) ->
+        ext.element.trigger('btnDown',event)
+        return
+
+      Socket.on  'swipeleft', () ->
+        ext.element.trigger('swipeleft')
+        return
+
+      Socket.on  'swiperight', () ->
+        ext.element.trigger('swiperight')
+        return
+
+      Socket.on  'swipeup', () ->
+        ext.element.trigger('swipeup')
+        return
+
+      Socket.on  'swipedown', () ->
+        ext.element.trigger('swipedown')
+        return
       return
 
   initialize: (@options) ->

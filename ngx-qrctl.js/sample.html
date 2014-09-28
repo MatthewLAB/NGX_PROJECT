@@ -20,6 +20,14 @@
         'debug':true
     });
 
+    $('#ngx_area').bind('swipeleft',function(event) {
+       alert("!!");
+    });
+
+    $('#ngx_area').bind('btnDown',function(event,key){
+        console.log(key);
+    });
+
     $('#ngx_area').bind('move',function(event,x,y){
         $.moveCircle(x,y);
     });
