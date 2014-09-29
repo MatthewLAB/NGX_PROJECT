@@ -1,5 +1,5 @@
 # ngx-qrctl.js
-#### NGX QR Controller is the world's first remote control jQuery plugin
+#### NGX QR Controller is the world's first remote web controller via user's mobile device
 ============
 
 ##Usage
