@@ -4,7 +4,7 @@
 ##License
 ============
 
-jQuery plugin to remote control via QR and user's device. Uses [QR Code Generator][qrcode] (MIT), 
+jQuery plugin to remote control via QR and user's device. MIT License
 
 ##Usage
 
