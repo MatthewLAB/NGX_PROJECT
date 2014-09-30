@@ -1,7 +1,8 @@
 # ngx-qrctl.js
 #### NGX QR Controller is the world's first remote web controller via user's mobile device
+
+##License
 ============
-[![license][license-img]][github] [![web][web-img]][web] [![github][github-img]][github] [![bower][bower-img]][github]
 
 jQuery plugin to remote control via QR and user's device. Uses [QR Code Generator][qrcode] (MIT), 
 
