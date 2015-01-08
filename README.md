@@ -67,3 +67,6 @@ $( "#ngx_area" ).ngxQrCtl({
     surl:'{your_socket.io_server_url}'
 });
 ```
+
+## Demo Video
+http://www.youtube.com/watch?v=Vjxvz-ngwSA
