@@ -5,6 +5,7 @@
 ============
 
 jQuery plugin to remote control via QR and user's device. MIT License
+Mainly made by Ikwhan Chang(San Jose State University, 010754107)
 
 ##Usage
 
